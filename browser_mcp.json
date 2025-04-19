@@ -1,0 +1,61 @@
+{
+  "mcpServers": {
+    "weather_forecast": {
+      "command": "python",
+      "args": [
+        "weather_mcp_server.py"
+      ],
+      "env": {
+        "WEATHER_API_KEY": "ffb812a897b2387e0798a9ddb1f973ef"
+      },
+      "disabled": false,
+      "autoApprove": [
+        "get_weather",
+        "get_current_weather"
+      ]
+    },
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "@playwright/mcp@latest"
+      ],
+      "options": {
+        "headless": true,
+        "slowMo": 50,
+        "args": [
+          "--disable-blink-features=AutomationControlled",
+          "--user-data-dir=/tmp/playwright-profile-c0416c4f",
+          "--no-first-run",
+          "--no-default-browser-check"
+        ],
+        "timeout": 30000
+      },
+      "env": {
+        "PLAYWRIGHT_BROWSERS_PATH": "0"
+      },
+      "autoApprove": [
+        "browser_navigate",
+        "browser_type",
+        "browser_press_key",
+        "browser_click",
+        "browser_snapshot"
+      ]
+    },
+    "airbnb": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@openbnb/mcp-server-airbnb"
+      ],
+      "autoApprove": true
+    },
+    "duckduckgo-search": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "duckduckgo-mcp-server"
+      ],
+      "autoApprove": true
+    }
+  }
+}
