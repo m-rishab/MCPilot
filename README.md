@@ -11,6 +11,7 @@ MCPilot is an AI-powered chatbot that integrates real-time tools like DuckDuckGo
 - **MCP Servers**: Backend that powers the agent's tool integration.
 
 ## Flowchart 
+![Image](https://github.com/user-attachments/assets/4eb1e2f5-9006-4272-8e08-1b88c88be9be)
 
 ## Installation
 
